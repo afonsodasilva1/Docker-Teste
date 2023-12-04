@@ -1,10 +1,9 @@
-import { Column, Entity, PrimaryColumn, PrimaryGeneratedColumn } from 'typeorm'
+import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm'
 
 @Entity('user')
 export class User {
-	@PrimaryColumn()
-	@Column({type: 'uuid'})
-	id: string
+	@PrimaryGeneratedColumn({type: 'tinyint'})
+	id: number
 
 	@Column({ type: 'text' })
 	name: string
