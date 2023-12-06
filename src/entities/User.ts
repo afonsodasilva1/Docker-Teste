@@ -1,9 +1,10 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm'
+import { randomUUID } from 'crypto'
+import { Column, Entity, PrimaryColumn } from 'typeorm'
 
 @Entity('user')
 export class User {
-	@PrimaryGeneratedColumn()
-	id: number
+	@PrimaryColumn('string', {length: 255, default: randomUUID()})
+	id: string
 
 	@Column({ type: 'text' })
 	name: string
