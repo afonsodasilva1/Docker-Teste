@@ -3,7 +3,7 @@ import { Column, Entity, PrimaryColumn } from 'typeorm'
 
 @Entity('user')
 export class User {
-	@PrimaryColumn('string', {length: 255, default: randomUUID()})
+	@PrimaryColumn('text', {default: randomUUID()})
 	id: string
 
 	@Column({ type: 'text' })
